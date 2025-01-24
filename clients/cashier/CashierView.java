@@ -86,12 +86,13 @@ public class CashierView implements Observer
     cp.add( theAction );                            //  Add to canvas
 
     theInput.setBounds( 110, 50, 270, 40 );         // Input Area
-    theInput.setText("");                           // Blank
+    theInput.setText("Enter ID");                           // Where to enter product ID
     cp.add( theInput );                             //  Add to canvas
 
     theSP.setBounds( 110, 100, 270, 160 );          // Scrolling pane
     theOutput.setText( "" );                        //  Blank
-    theOutput.setFont( f );                         //  Uses font  
+    theOutput.setFont( f );                         //  Uses font
+    theOutput.setEditable(false);                   // Stops user typing where the product info is shown
     cp.add( theSP );                                //  Add to canvas
     theSP.getViewport().add( theOutput );           //  In TextArea
     rootWindow.setVisible( true );                  // Make visible

@@ -84,20 +84,22 @@ public class BackDoorView implements Observer
     cp.add( theAction );                            //  Add to canvas
 
     theInput.setBounds( 110, 50, 120, 40 );         // Input Area
-    theInput.setText("");                           // Blank
+    theInput.setText("Enter ID");                           // The Input for the Product ID
     cp.add( theInput );                             //  Add to canvas
     
     theInputNo.setBounds( 260, 50, 120, 40 );       // Input Area
-    theInputNo.setText("0");                        // 0
+    theInputNo.setText("Enter Stock");                        // Stock Amount to be added
     cp.add( theInputNo );                           //  Add to canvas
 
     theSP.setBounds( 110, 100, 270, 160 );          // Scrolling pane
     theOutput.setText( "" );                        //  Blank
-    theOutput.setFont( f );                         //  Uses font  
+    theOutput.setFont( f );                         //  Uses font
+    theOutput.setEditable(false);                   // Stops user typing where the product info is shown
     cp.add( theSP );                                //  Add to canvas
     theSP.getViewport().add( theOutput );           //  In TextArea
     rootWindow.setVisible( true );                  // Make visible
     theInput.requestFocus();                        // Focus is here
+
   }
   
   public void setController( BackDoorController c )
