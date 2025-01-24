@@ -75,6 +75,7 @@ class Main
   public void startCashierGUI_MVC(MiddleFactory mlf )
   {
     JFrame  window = new JFrame();
+    window.setResizable(false); //Prevents the screen size from being changed
     window.setTitle( "Cashier Client MVC");
     window.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
     Dimension pos = PosOnScrn.getPos();
@@ -97,7 +98,7 @@ class Main
   public void startPackingGUI_MVC(MiddleFactory mlf)
   {
     JFrame  window = new JFrame();
-
+    window.setResizable(false); //Prevents the screen size from being changed
     window.setTitle( "Packing Client MVC");
     window.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
     Dimension pos = PosOnScrn.getPos();
@@ -118,7 +119,7 @@ class Main
   public void startBackDoorGUI_MVC(MiddleFactory mlf )
   {
     JFrame  window = new JFrame();
-
+    window.setResizable(false); //Prevents the screen size from being changed
     window.setTitle( "BackDoor Client MVC");
     window.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
     Dimension pos = PosOnScrn.getPos();
