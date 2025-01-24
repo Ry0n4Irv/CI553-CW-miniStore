@@ -65,6 +65,7 @@ class Main
     view.setController( cont );
 
     model.addObserver( view );       // Add observer to the model, ---view is observer, model is Observable
+    window.getContentPane().setBackground(new Color(119, 219, 252));
     window.setVisible(true);         // start Screen
   }
 
@@ -87,6 +88,7 @@ class Main
 
     model.addObserver( view );       // Add observer to the model
     window.setVisible(true);         // Make window visible
+    window.getContentPane().setBackground(new Color(247, 84, 82));
     model.askForUpdate();            // Initial display
   }
 
@@ -109,6 +111,7 @@ class Main
     view.setController( cont );
 
     model.addObserver( view );       // Add observer to the model
+    window.getContentPane().setBackground(new Color(83, 95, 99));
     window.setVisible(true);         // Make window visible
   }
   
@@ -130,6 +133,7 @@ class Main
     view.setController( cont );
 
     model.addObserver( view );       // Add observer to the model
+    window.getContentPane().setBackground(new Color(226, 255, 133));
     window.setVisible(true);         // Make window visible
   }
   

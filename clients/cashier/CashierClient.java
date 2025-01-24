@@ -6,6 +6,7 @@ import middle.Names;
 import middle.RemoteMiddleFactory;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * The standalone Cashier Client.
