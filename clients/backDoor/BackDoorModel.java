@@ -103,8 +103,12 @@ public class BackDoorModel extends Observable
       try
       {
         amount = Integer.parseInt(aQuantity);   // Convert
-        if ( amount < 0 )
-          throw new NumberFormatException("-ve");
+        if ( amount < 1 ) {
+          theAction = "Quantity must be 1 or more."; // If quantity is less than 1 show error message
+          setChanged();
+          notifyObservers(theAction);
+          return;
+        }
       }
       catch ( Exception err)
       {

@@ -8,6 +8,8 @@ import middle.StockReader;
 
 import javax.swing.*;
 import java.awt.*;
+import javax.sound.sampled.*;
+import java.io.File;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -70,11 +72,13 @@ public class CustomerView implements Observer
     theBtCheck.setBounds( 16, 25+60*0, 80, 40 );    // Check button
     theBtCheck.addActionListener(                   // Call back code
       e -> cont.doCheck( theInput.getText() ) );
+    theBtCheck.addActionListener(e ->  playSound("images/mouse_click.wav")); //PLay click sound
     cp.add( theBtCheck );                           //  Add to canvas
 
     theBtClear.setBounds( 16, 25+60*1, 80, 40 );    // Clear button
     theBtClear.addActionListener(                   // Call back code
-      e -> cont.doClear() );
+      e ->  cont.doClear() );
+    theBtClear.addActionListener(e ->  playSound("images/mouse_click.wav"));
     cp.add( theBtClear );                           //  Add to canvas
 
     theAction.setBounds( 110, 25 , 270, 20 );       // Message area
@@ -115,6 +119,18 @@ public class CustomerView implements Observer
    * @param modelC   The observed model
    * @param arg      Specific args 
    */
+
+  public static void playSound(String soundFilePath) {
+    try {
+      File soundFile = new File(soundFilePath);
+      AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundFile);
+      Clip clip = AudioSystem.getClip();
+      clip.open(audioStream);
+      clip.start();
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
+  }
    
   public void update( Observable modelC, Object arg )
   {

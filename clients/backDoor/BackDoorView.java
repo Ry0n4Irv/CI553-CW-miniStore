@@ -91,6 +91,8 @@ public class BackDoorView implements Observer
     theInputNo.setText("Enter Stock");                        // Stock Amount to be added
     cp.add( theInputNo );                           //  Add to canvas
 
+
+
     theSP.setBounds( 110, 100, 270, 160 );          // Scrolling pane
     theOutput.setText( "" );                        //  Blank
     theOutput.setFont( f );                         //  Uses font
