@@ -60,9 +60,12 @@ public class CashierView implements Observer
     rootWindow.setSize( W, H );                     // Size of Window
     rootWindow.setLocation( x, y );
 
+
+
     Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
 
-    pageTitle.setBounds( 110, 0 , 270, 20 );       
+
+    pageTitle.setBounds( 110, 0 , 270, 20 );
     pageTitle.setText( "Thank You for Shopping at MiniStrore" );                        
     cp.add( pageTitle );  
     
@@ -71,7 +74,7 @@ public class CashierView implements Observer
       e -> cont.doCheck( theInput.getText() ) );
     cp.add( theBtCheck );                           //  Add to canvas
 
-    theBtBuy.setBounds( 16, 25+60*1, 80, 40 );      // Buy button 
+    theBtBuy.setBounds( 16, 25+60*1, 80, 40 );      // Buy button
     theBtBuy.addActionListener(                     // Call back code
       e -> cont.doBuy() );
     cp.add( theBtBuy );                             //  Add to canvas
