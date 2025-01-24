@@ -13,8 +13,8 @@ public class BetterBasket extends Basket implements Serializable
 {
   private static final long serialVersionUID = 1L;
   
+  public void testMethod() {
+    System.out.println("Ignore ME<3");
+  }
 
-  // You need to add code here
-  // merge the items for same product,
-  // or sort the item based on the product number
 }
